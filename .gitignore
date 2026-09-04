@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+backend/data/clients.json
+node_modules/
+.DS_Store
