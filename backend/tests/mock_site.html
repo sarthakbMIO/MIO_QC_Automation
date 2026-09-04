@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><title>Mock University Site</title></head>
+<body>
+  <header><h1>ABC University</h1><nav>Home | Courses | Admissions | Contact</nav></header>
+  <main>
+    <p>Welcome to ABC University. Explore our programmes below.</p>
+    <div class="promo-banner"><input type="text" placeholder="Search courses..."><button>Search</button></div>
+    <footer>
+      <input type="email" placeholder="Subscribe to newsletter">
+      <button>Subscribe</button>
+    </footer>
+  </main>
+
+  <!-- Realistic chat widget: generic vendor naming, fixed position, no obvious "chatbot" label -->
+  <div id="lc-widget-container" style="position:fixed;bottom:20px;right:20px;width:340px;z-index:9999;" aria-label="Live chat">
+    <div class="lc-header">Chat with us</div>
+    <div class="lc-messages" id="lc-messages">
+      <div class="lc-msg lc-bot">Hi! How can I help you today?</div>
+    </div>
+    <div class="lc-input-row">
+      <textarea id="lc-input" placeholder="Type a message..."></textarea>
+      <div id="lc-send-btn" role="button">➤</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('lc-send-btn').addEventListener('click', function() {
+      const input = document.getElementById('lc-input');
+      const msgs = document.getElementById('lc-messages');
+      if (!input.value.trim()) return;
+      const userMsg = document.createElement('div');
+      userMsg.className = 'lc-msg lc-user';
+      userMsg.textContent = input.value;
+      msgs.appendChild(userMsg);
+      const q = input.value;
+      input.value = '';
+      setTimeout(function() {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'lc-msg lc-bot';
+        botMsg.textContent = 'Our fee for the programme is Rs. 250000 payable in 4 installments.';
+        msgs.appendChild(botMsg);
+      }, 600);
+    });
+  </script>
+</body>
+</html>

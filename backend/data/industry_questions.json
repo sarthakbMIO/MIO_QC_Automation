@@ -1,0 +1,82 @@
+{
+  "EdTech": [
+    "What courses or programmes do you offer?",
+    "What is the fee structure?",
+    "Is there an EMI or installment option available?",
+    "What is the eligibility criteria for your programmes?",
+    "How do I get in touch with a counsellor?",
+    "Is the certification recognized or accredited?",
+    "What is the mode of learning - online, offline, or hybrid?",
+    "What is the duration of the course?"
+  ],
+  "Coaching & Training Institutes": [
+    "What courses do you offer coaching for?",
+    "What is the fee for your coaching program?",
+    "Do you provide study material?",
+    "What is the batch size?",
+    "Do you offer online and offline classes?",
+    "What is your success rate or past results?",
+    "When does the next batch start?",
+    "Do you offer demo classes?"
+  ],
+  "K-12 Schools": [
+    "What grades or classes do you offer?",
+    "What is the admission process?",
+    "What is the fee structure for each grade?",
+    "What curriculum board do you follow - CBSE, ICSE, or IB?",
+    "What are the school timings?",
+    "Is transportation available?",
+    "What extracurricular activities do you offer?",
+    "What is the teacher-to-student ratio?"
+  ],
+  "Preschools & Playschools": [
+    "What age groups do you accept?",
+    "What is the fee structure?",
+    "What is the curriculum or teaching methodology used?",
+    "What are the school hours?",
+    "Is there a trial class available?",
+    "What safety measures are in place?",
+    "What is the teacher-to-child ratio?",
+    "Do you provide meals or snacks?"
+  ],
+  "Online Degree Programmes": [
+    "What degree programmes do you offer?",
+    "Is the degree UGC/AICTE recognized?",
+    "What is the fee structure and payment options?",
+    "What is the eligibility criteria for admission?",
+    "How are exams conducted?",
+    "What is the duration of the programme?",
+    "Is placement assistance provided?",
+    "How do I contact admissions support?"
+  ],
+  "Higher Education": [
+    "What programmes or specializations do you offer?",
+    "What is the admission process and eligibility criteria?",
+    "What is the fee structure?",
+    "Is scholarship or financial aid available?",
+    "What are the placement statistics?",
+    "What is the campus infrastructure like?",
+    "How do I apply?",
+    "Who do I contact for admissions queries?"
+  ],
+  "Study Abroad Consultants": [
+    "What countries do you help students apply to?",
+    "What is your service fee?",
+    "Do you help with visa applications?",
+    "Do you assist with scholarships or education loans?",
+    "What is the typical processing time?",
+    "Do you provide test preparation (IELTS/TOEFL/GRE)?",
+    "Which universities do you have partnerships with?",
+    "How do I book a consultation?"
+  ],
+  "Channel Partners": [
+    "What is the partnership or franchise model?",
+    "What is the investment required to become a partner?",
+    "What support or training is provided to partners?",
+    "What is the revenue-sharing structure?",
+    "What is the onboarding process for a new partner?",
+    "What territories or regions are available?",
+    "Who do I contact to discuss partnership?",
+    "What marketing support is provided?"
+  ]
+}
