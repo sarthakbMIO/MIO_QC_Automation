@@ -4,6 +4,7 @@ Uses polling on message count (Playwright-native, no MutationObserver needed
 since Playwright can just re-query the DOM).
 """
 import time
+from collections import Counter
 
 
 def _get_message_texts_js(container_selector):
@@ -43,9 +44,21 @@ def ask_question(page, widget_selector, question, timeout_s=10, poll_interval=0.
         time.sleep(poll_interval)
         elapsed += poll_interval
         after = page.evaluate(_get_message_texts_js(widget_selector))
-        new_texts = [t for t in after if t not in before and t != question]
+
+        # Multiset diff: new text nodes appended anywhere in the DOM (not
+        # necessarily at the tail - message containers are often positioned
+        # earlier than static UI like the send button) must still be
+        # detected as new, and a bot repeating an IDENTICAL reply to an
+        # earlier question must also register as a fresh occurrence.
+        remaining = Counter(before)
+        new_texts = []
+        for t in after:
+            if remaining.get(t, 0) > 0:
+                remaining[t] -= 1  # this occurrence already existed pre-send
+            elif t != question:
+                new_texts.append(t)
+
         if new_texts:
-            # Return the last new text - typically the bot's reply
             return {"status": "ok", "answer": new_texts[-1], "raw_new": new_texts}
 
     return {"status": "timeout", "answer": None, "raw_new": []}
